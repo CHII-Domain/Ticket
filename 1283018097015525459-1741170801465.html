@@ -110,12 +110,16 @@ img {
             function closeLightbox() {
                 document.getElementById('lightbox').style.display = 'none';
             }
- function enterChat() {
-        document.getElementById('button-container').style.display = 'none';
-        document.getElementById('content-wrapper').style.display = 'block';
+function enterChat() {
+    document.getElementById('button-container').style.display = 'none';
+    document.getElementById('content-wrapper').style.display = 'block';
 
-        window.location.href = DomainURL; 
-    }
+    // ใช้ setTimeout เพื่อให้เวลาในการแสดงผลก่อนเปลี่ยน URL
+    setTimeout(function() {
+        window.location.replace(DomainURL); // หรือใช้ location.href ก็ได้
+    }, 500); // ปรับเวลาตามต้องการ
+}
+
 
         </script>
     
